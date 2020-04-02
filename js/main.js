@@ -10,7 +10,7 @@ $(window).on("load", function () {
 });
 
   AOS.init();
-
+  $(".selectpicker").selectpicker();
   
 $(function() {
 
