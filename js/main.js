@@ -45,6 +45,7 @@ $(function() {
       responsiveClass:true,
       responsive:{
           0:{
+              margin:20,
               items:1
           },
           600:{
@@ -78,12 +79,75 @@ $(function() {
     });
 
     if ($(window).width() < 992) {
-        $(".newest .dynamic-tabs .content .content-one .card").wrapAll(".owl-carousel");
-        $(".newest .dynamic-tabs .content .content-two .card").wrapAll(".owl-carousel");
-        $(".newest .dynamic-tabs .content .content-three .card").wrapAll(".owl-carousel");
-        $(".newest .dynamic-tabs .content .content-four .card").wrapAll(".owl-carousel");
+        $(".newest .dynamic-tabs .content .content-one .card").wrapAll("<div class='owl-carousel'></div>");
+        $(".newest .dynamic-tabs .content .content-two .card").wrapAll("<div class='owl-carousel'></div>");
+        $(".newest .dynamic-tabs .content .content-three .card").wrapAll("<div class='owl-carousel'></div>");
+        $(".newest .dynamic-tabs .content .content-four .card").wrapAll("<div class='owl-carousel'></div>");
         
         $('.content-one .owl-carousel').owlCarousel({
+          rtl: document.dir == 'rtl' ? true : false,
+          autoplay:true,
+          loop:true,
+          margin:0,
+          dots:true,
+          navs:false,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  margin:30,
+                  items:1,
+                },
+                600:{
+                  items:2,
+              },
+              1000:{
+                  items:6,
+              }
+          }
+        });
+        $('.content-two .owl-carousel').owlCarousel({
+          rtl: document.dir == 'rtl' ? true : false,
+          autoplay:true,
+          loop:true,
+          margin:0,
+          dots:true,
+          navs:false,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  margin:30,
+                  items:1,
+                },
+                600:{
+                  items:2,
+              },
+              1000:{
+                  items:6,
+              }
+          }
+        });
+        $('.content-three .owl-carousel').owlCarousel({
+          rtl: document.dir == 'rtl' ? true : false,
+          autoplay:true,
+          loop:true,
+          margin:0,
+          dots:true,
+          navs:false,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  margin:30,
+                  items:1,
+                },
+                600:{
+                  items:2,
+              },
+              1000:{
+                  items:6,
+              }
+          }
+        });
+        $('.content-four .owl-carousel').owlCarousel({
           rtl: document.dir == 'rtl' ? true : false,
           autoplay:true,
           loop:true,
